@@ -49,4 +49,9 @@ public class User extends Model{
         return null;
     }
 public static Finder<Long,User> find = new Finder<Long,User>(User.class);
+    public User(String email,String password)
+    {
+        this.email=email;
+        this.password=BCrypt.hashpw(password,BCrypt.gensalt());
+    }
 }
