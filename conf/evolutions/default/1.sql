@@ -8,7 +8,7 @@ create table connection_request (
   sender_id                 bigint,
   receiver_id               bigint,
   status                    varchar(8),
-  constraint ck_connection_request_status check (status in ('ACCEPTED','waiting')),
+  constraint ck_connection_request_status check (status in ('ACCEPTED','WAITING')),
   constraint pk_connection_request primary key (id))
 ;
 
