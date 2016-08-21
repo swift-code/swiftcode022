@@ -23,4 +23,5 @@ public class Profile extends Model {
         this.lastName = lastName;
         this.firstName = firstName;
     }
+    public static Finder<Long,Profile> find = new Finder<Long,Profile>(Profile.class);
 }
